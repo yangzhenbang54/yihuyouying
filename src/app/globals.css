@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap');
+
+@layer base {
+  :root {
+    --brand-600: #0d9488;
+    --accent-500: #f59e0b;
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border-color: #e2e8f0;
+  }
+
+  .text-large {
+    font-size: 115% !important;
+  }
+
+  .text-large h1 { font-size: 2rem !important; }
+  .text-large h2 { font-size: 1.5rem !important; }
+  .text-large h3 { font-size: 1.25rem !important; }
+  .text-large p, .text-large span, .text-large div { font-size: 115% !important; }
+
+  body {
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .ant-layout {
+    background: transparent !important;
+  }
+
+  .ant-card {
+    border-radius: 16px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04) !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  }
+
+  .ant-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04) !important;
+  }
+
+  .ant-btn {
+    border-radius: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .ant-btn-primary {
+    background: linear-gradient(135deg, var(--brand-600), #0f766e) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(13,148,136,0.25) !important;
+  }
+
+  .ant-btn-primary:hover {
+    background: linear-gradient(135deg, #0f766e, #115e59) !important;
+    box-shadow: 0 6px 16px rgba(13,148,136,0.35) !important;
+    transform: translateY(-1px);
+  }
+
+  .ant-btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .ant-btn-lg {
+    border-radius: 16px !important;
+    height: 52px !important;
+    padding: 0 32px !important;
+    font-size: 17px !important;
+  }
+
+  .ant-input, .ant-input-affix-wrapper {
+    border-radius: 14px !important;
+    padding: 10px 16px !important;
+    font-size: 16px !important;
+    border-color: var(--border-color) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .ant-input:focus, .ant-input-affix-wrapper-focused {
+    border-color: var(--brand-600) !important;
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.15) !important;
+  }
+
+  .ant-input-affix-wrapper {
+    padding: 0 12px !important;
+  }
+
+  .ant-table {
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
+
+  .ant-table-thead > tr > th {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border-bottom: 2px solid var(--border-color) !important;
+  }
+
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid #f1f5f9 !important;
+    padding: 12px 16px !important;
+  }
+
+  .ant-tag {
+    border-radius: 8px !important;
+    padding: 2px 12px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+  }
+
+  .ant-modal-content {
+    border-radius: 20px !important;
+    overflow: hidden;
+  }
+
+  .ant-modal-header {
+    border-radius: 20px 20px 0 0 !important;
+  }
+
+  .ant-tabs-tab {
+    font-size: 16px !important;
+    padding: 12px 20px !important;
+  }
+
+  .ant-tabs-ink-bar {
+    height: 3px !important;
+    border-radius: 2px !important;
+  }
+
+  .ant-menu-item {
+    border-radius: 10px !important;
+    margin: 2px 8px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+  }
+
+  .ant-badge-count {
+    box-shadow: none !important;
+  }
+
+  .ant-progress-text {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    box-shadow: -8px 0 24px rgba(0,0,0,0.08) !important;
+  }
+
+  .ant-drawer-header {
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 20px 24px !important;
+  }
+
+  .ant-empty-image {
+    height: 80px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .ant-select-selector {
+    border-radius: 14px !important;
+  }
+
+  @media (max-width: 768px) {
+    .ant-card {
+      border-radius: 12px !important;
+    }
+    .ant-btn {
+      border-radius: 12px !important;
+    }
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-panel-light {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .gradient-brand {
+    background: linear-gradient(135deg, #14b8a6, #0d9488, #0f766e);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: inherit;
+    transform: scale(0);
+    opacity: 0;
+    transition: none;
+  }
+
+  .ripple:active::after {
+    animation: ripple 0.6s linear;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
+
+@layer components {
+  /* Capability cards hover effect */
+  .cards-group .card-item {
+    transition: transform 400ms ease, filter 400ms ease, box-shadow 400ms ease !important;
+  }
+  .cards-group:hover .card-item:not(:hover) {
+    filter: blur(6px);
+    transform: scale(0.93);
+  }
+  .cards-group .card-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+}
+
+@layer utilities {
+  @keyframes ripple {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes page-flip-2 {
+    0% { transform: rotateY(180deg); opacity: 0; }
+    20% { opacity: 1; }
+    35%, 100% { opacity: 0; }
+    50%, 100% { transform: rotateY(0deg); }
+  }
+
+  @keyframes page-flip-3 {
+    15% { transform: rotateY(180deg); opacity: 0; }
+    35% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+    65%, 100% { transform: rotateY(0deg); }
+  }
+
+  @keyframes page-flip-4 {
+    30% { transform: rotateY(180deg); opacity: 0; }
+    50% { opacity: 1; }
+    65%, 100% { opacity: 0; }
+    80%, 100% { transform: rotateY(0deg); }
+  }
+
+  @keyframes page-flip-5 {
+    45% { transform: rotateY(180deg); opacity: 0; }
+    65% { opacity: 1; }
+    80%, 100% { opacity: 0; }
+    95%, 100% { transform: rotateY(0deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .flip-card-inner {
+      transition: none !important;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+import { TrustedContact } from '@/types/contact'
+
+export const mockContacts: TrustedContact[] = [
+  { id: 'c1', elderId: 'e1', name: '张明', relation: '女儿', phone: '13900001001', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c2', elderId: 'e1', name: '雨花社区网格员', relation: '社区工作人员', phone: '13900001002', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+  { id: 'c3', elderId: 'e2', name: '李小明', relation: '儿子', phone: '13900001003', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c4', elderId: 'e2', name: '东山社区网格员', relation: '社区工作人员', phone: '13900001004', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+  { id: 'c5', elderId: 'e3', name: '王国强', relation: '丈夫', phone: '13900001005', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c6', elderId: 'e3', name: '王小明', relation: '儿子', phone: '13900001006', priority: 2, verifiedStatus: 'pending', canMakeDecision: true },
+  { id: 'c7', elderId: 'e4', name: '张丽', relation: '女儿', phone: '13900001007', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c8', elderId: 'e5', name: '赵强', relation: '儿子', phone: '13900001008', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c9', elderId: 'e5', name: '赵芳', relation: '女儿', phone: '13900001009', priority: 2, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c10', elderId: 'e6', name: '刘丽', relation: '妻子', phone: '13900001010', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c11', elderId: 'e7', name: '陈强', relation: '儿子', phone: '13900001011', priority: 1, verifiedStatus: 'pending', canMakeDecision: true },
+  { id: 'c12', elderId: 'e8', name: '周华', relation: '女儿', phone: '13900001012', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c13', elderId: 'e8', name: '雨花社区网格员', relation: '社区工作人员', phone: '13900001002', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+  { id: 'c14', elderId: 'e9', name: '马建国', relation: '丈夫', phone: '13900001013', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c15', elderId: 'e10', name: '玄武湖养老院客服', relation: '机构管理人员', phone: '13900001014', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c16', elderId: 'e10', name: '胡小军', relation: '儿子', phone: '13900001015', priority: 2, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c17', elderId: 'e11', name: '冯刚', relation: '儿子', phone: '13900001016', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c18', elderId: 'e11', name: '雨花社区网格员', relation: '社区工作人员', phone: '13900001002', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+  { id: 'c19', elderId: 'e12', name: '曹丽', relation: '女儿', phone: '13900001017', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c20', elderId: 'e13', name: '许明', relation: '儿子', phone: '13900001018', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c21', elderId: 'e13', name: '玄武湖社区网格员', relation: '社区工作人员', phone: '13900001019', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+  { id: 'c22', elderId: 'e14', name: '董太太', relation: '妻子', phone: '13900001020', priority: 1, verifiedStatus: 'verified', canMakeDecision: true },
+  { id: 'c23', elderId: 'e15', name: '金明', relation: '儿子', phone: '13900001021', priority: 1, verifiedStatus: 'pending', canMakeDecision: true },
+  { id: 'c24', elderId: 'e15', name: '东山社区网格员', relation: '社区工作人员', phone: '13900001004', priority: 2, verifiedStatus: 'verified', canMakeDecision: false },
+]
