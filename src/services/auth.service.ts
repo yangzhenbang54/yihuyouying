@@ -22,7 +22,7 @@ export const authService = {
     // Update lastLogin
     await prisma.user.update({
       where: { id: user.id },
-      data: { lastLogin: new Date().toISOString() },
+      data: { lastLogin: new Date() },
     })
 
     return excludePasswordHash(user)

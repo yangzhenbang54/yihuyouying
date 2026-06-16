@@ -27,10 +27,11 @@ export async function POST(request: NextRequest) {
     setAuthCookie(token);
 
     return success(user);
-  } catch (e) {
+  } catch (e: any) {
+    console.error('Register error:', e?.message || e, e?.code);
     if (e instanceof AppError) {
       return error(e.message, e.statusCode);
     }
-    return error('注册失败，服务器内部错误', 500);
+    return error(`注册失败: ${e?.message || '服务器内部错误'}`, 500);
   }
 }
